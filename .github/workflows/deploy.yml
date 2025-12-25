@@ -43,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist 
+          path: docs/.vitepress/dist 
           # 注意：如果你的源码在 docs 目录下，这里通常是 docs/.vitepress/dist
           # 请根据你平时本地打包后生成的 dist 文件夹位置来填
 
