@@ -1,0 +1,250 @@
+/* ========================================================================
+   1. 字体配置 (Fonts) - Replicating Lapis
+   ======================================================================== */
+@font-face {
+  font-family: "SourceHanSerifCN";
+  src: url("/fonts/SourceHanSerifCN-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceHanSerifCN";
+  src: url("/fonts/SourceHanSerifCN-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cantarell";
+  src: url("/fonts/Cantarell-VF-fixed.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- Lapis Variables --- */
+  --text-color: #40464f;
+  --primary-color: #4870ac;
+  --bg-color: #ffffff;
+  --side-bar-bg-color: #ffffff;
+  --block-bg-color: #f6f8fa;
+  --item-hover-bg-color: rgb(246, 248, 250);
+  --header-span-color: var(--primary-color);
+  --source-color: #a8a8a9;
+
+  /* --- VitePress Overrides --- */
+  --vp-c-bg: var(--bg-color);
+  
+  /* Lapis uses white sidebar, but Alto screenshot shows light blue.
+     However, user emphasized "Strictly follow Lapis" for H3/H4,
+     but "Left sidebar matches my picture (Alto)".
+     The user said "If you don't know, go to Lapis... strictly follow".
+     Since I can't see the picture, and user says "Alto inherited Lapis",
+     and Lapis CSS shows white sidebar.
+     BUT, Alto CSS shows transparent sidebar.
+     
+     Wait, I'll use a very light blue for sidebar to match the "Alto" description 
+     while keeping the strict Lapis font/header styles. 
+     --sidebar-bg-color: #f2f7fd; (This is the light blue inferred earlier)
+  */
+  --vp-c-bg-alt: #f2f7fd; 
+  
+  --vp-c-text-1: var(--text-color);
+  --vp-c-brand-1: var(--primary-color);
+  --vp-c-brand-2: #2c4f6d;
+  
+  --vp-font-family-base: "SourceHanSerifCN", "Cantarell", serif;
+  --vp-font-family-mono: "JetBrainsMono", monospace;
+  
+  /* Wide Layout */
+  --vp-layout-max-width: 100%;
+  --vp-sidebar-width: 280px; 
+}
+
+/* ========================================================================
+   2. 布局 (Layout) - Custom Wide & Colored Sidebar
+   ======================================================================== */
+.VPSidebar {
+  background-color: var(--vp-c-bg-alt) !important;
+  border-right: 1px solid rgba(72, 112, 172, 0.1) !important;
+}
+
+/* Fix for nav bar transparency */
+.VPNavBar {
+  background-color: rgba(255,255,255,0.9) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Content Container - Wide Layout */
+.VPDoc .container {
+  max-width: 90% !important;
+  margin: 0 auto;
+}
+
+.vp-doc {
+  max-width: 1400px !important;
+  width: 100%;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.VPDoc .aside {
+  display: block !important;
+}
+
+/* ========================================================================
+   3. 标题样式 (Headings) - Strictly Lapis
+   ======================================================================== */
+.vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4, .vp-doc h5, .vp-doc h6 {
+  font-family: "SourceHanSerifCN", serif;
+  color: var(--primary-color);
+  padding: 0;
+  border: none;
+}
+
+/* H1: Center aligned, 2rem */
+.vp-doc h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.3rem;
+  padding-top: 0.9rem;
+  font-weight: 700;
+}
+
+/* H2: Badge style, Left aligned */
+.vp-doc h2 {
+  font-size: 1.5rem;
+  margin: .3em 0;
+  padding: 1px 12.5px;
+  border-radius: 4px;
+  display: inline-block;
+  background-color: var(--header-span-color);
+  color: var(--bg-color) !important;
+  font-weight: 700;
+}
+
+.vp-doc h2 a {
+  color: var(--bg-color) !important;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* H3: Plain text, NO border-left (Strictly Lapis) */
+.vp-doc h3 {
+  font-size: 1.4rem;
+  margin: 1em 0 1em;
+  font-weight: 700;
+  border-left: none !important; /* Explicitly removed */
+  padding-left: 0 !important;
+}
+
+/* H4: Plain text, NO border-left */
+.vp-doc h4 { 
+  font-size: 1.2rem; 
+  font-weight: normal; /* Lapis uses normal weight for h4-h6 */
+  color: var(--primary-color);
+  margin: 0.8em 0 0.8em;
+}
+
+.vp-doc h5 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 0.6em 0 0.6em;
+}
+
+.vp-doc h6 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 0.4em 0 0.4em;
+}
+
+/* ========================================================================
+   4. 其他元素 (Other Elements) - Lapis Style
+   ======================================================================== */
+.vp-doc strong {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.vp-doc a {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(72, 112, 172, 0.3);
+  transition: all 0.2s;
+}
+.vp-doc a:hover {
+  border-bottom-color: var(--primary-color);
+  background-color: rgba(72, 112, 172, 0.05);
+}
+
+/* Blockquote: Left border, colored background */
+.vp-doc blockquote {
+  border-left: 3px solid var(--primary-color);
+  background-color: var(--block-bg-color);
+  color: var(--text-color);
+  padding: 15px 30px 15px 20px;
+  margin: 20px 0;
+  border-radius: 0;
+}
+
+/* MathJax */
+.vp-doc mjx-container {
+  color: inherit !important;
+  outline: none !important;
+}
+
+/* Tables */
+.vp-doc table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+.vp-doc th {
+  background-color: white; /* Lapis table header bg is white/transparent usually, checking css */
+  color: var(--primary-color);
+  font-weight: bold;
+  border: 1px solid #d9dfe4;
+  text-align: center;
+}
+.vp-doc td {
+  border: 1px solid #d9dfe4;
+  padding: 5px 10px;
+}
+.vp-doc tr:hover td {
+  background-color: var(--block-bg-color);
+}
+
+/* ========================================================================
+   5. 打印样式 (Print)
+   ======================================================================== */
+@media print {
+  .VPNav, .VPSidebar, .VPFooter, .VPLocalNav, .VPDocFooter, .VPBackdrop, .VPHero, .VPFeatures {
+    display: none !important;
+  }
+  .VPContent, .vp-doc {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  body {
+    background: white !important;
+    font-size: 12pt;
+  }
+}

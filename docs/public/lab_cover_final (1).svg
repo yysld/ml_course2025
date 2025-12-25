@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="595" height="842" viewBox="0 0 595 842" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fadeBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d0e4f0" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#e8f0f6" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="595" height="842" fill="#fdfeff"/>
+  
+  <!-- ========== 底部波浪装饰 + 融入的数据点 ========== -->
+  <g opacity="0.30">
+    <!-- 最远的波浪层 -->
+    <path d="M0 720 
+             Q100 690, 200 710 
+             T400 680 
+             T595 700 
+             L595 842 L0 842 Z" 
+          fill="#d8ecf4"/>
+    <!-- 中间波浪层 -->
+    <path d="M0 755 
+             Q80 725, 180 745 
+             T360 715 
+             T595 740 
+             L595 842 L0 842 Z" 
+          fill="#b8dce8"/>
+    <!-- 最近的波浪层 -->
+    <path d="M0 790 
+             Q120 765, 250 780 
+             T480 760 
+             T595 785 
+             L595 842 L0 842 Z" 
+          fill="#98d0e0"/>
+  </g>
+  
+  <!-- 漂浮在波浪上的数据点 -->
+  <g opacity="0.4">
+    <circle cx="80" cy="735" r="3" fill="#7eb8d4"/>
+    <circle cx="130" cy="718" r="2" fill="#8ec4dc"/>
+    <circle cx="195" cy="728" r="2.5" fill="#7eb8d4"/>
+    <circle cx="260" cy="705" r="2" fill="#a0d0e4"/>
+    <circle cx="310" cy="715" r="3" fill="#8ec4dc"/>
+    <circle cx="380" cy="698" r="2" fill="#7eb8d4"/>
+    <circle cx="430" cy="720" r="2.5" fill="#a0d0e4"/>
+    <circle cx="500" cy="708" r="2" fill="#8ec4dc"/>
+    <circle cx="550" cy="725" r="2.5" fill="#7eb8d4"/>
+  </g>
+  
+  <!-- ========== 中央留白 ========== -->
+  
+  <!-- ========== 实验编号 ========== -->
+  <text x="498" y="98" font-family="Didot, 'Bodoni MT', 'GFS Didot', Georgia, serif" font-size="68" font-weight="300" fill="#e4eff6" letter-spacing="-3">03</text>
+  
+  <!-- ========== 顶部标识 ========== -->
+  <text x="50" y="88" font-family="Didot, 'Bodoni MT', 'GFS Didot', Georgia, serif" font-size="13" fill="#8ab4d0" letter-spacing="3" font-style="italic">Lab Session</text>
+  <line x1="50" y1="102" x2="135" y2="102" stroke="#c8dce8" stroke-width="0.5"/>
+  
+  <!-- ========== 左上课程信息 ========== -->
+  <g font-family="'Noto Serif SC', 'Source Han Serif CN', 'Songti SC', STSong, serif" fill="#98a4ac">
+    <text x="50" y="148" font-size="11">课程名称：机器学习</text>
+    <text x="50" y="172" font-size="10" font-family="Didot, Georgia, serif" fill="#a8b4bc">H102240326048.02</text>
+    <text x="50" y="196" font-size="11">授课教师：张艺赢</text>
+    <text x="50" y="220" font-size="11">实验学时：16 学时</text>
+  </g>
+  
+  <!-- ========== 主标题区 ========== -->
+  <text x="50" y="580" font-family="Didot, 'Bodoni MT', 'GFS Didot', Baskerville, Georgia, serif" font-size="26" font-weight="600" fill="#4a5a6a" letter-spacing="0.5" font-style="italic">Explorations in Machine Learning</text>
+  
+  <!-- 中文标题 -->
+  <text x="50" y="615" font-family="'Noto Serif SC', 'Source Han Serif CN', 'Songti SC', STSong, serif" font-size="16" font-weight="500" fill="#3a4a58">机器学习实验指导书</text>
+  
+  <!-- 装饰线 -->
+  <line x1="50" y1="633" x2="105" y2="633" stroke="#a8c8dc" stroke-width="1"/>
+  <circle cx="112" cy="633" r="1.5" fill="#a8c8dc"/>
+  
+  <!-- 实验主题 - 可变内容 -->
+  <text x="50" y="665" font-family="Didot, 'Bodoni MT', 'GFS Didot', Georgia, serif" font-size="13" fill="#5a8aa5" font-style="italic">The Anatomy of Logistic Regression</text>
+  <text x="50" y="688" font-family="'Noto Serif SC', 'Source Han Serif CN', 'Songti SC', STSong, serif" font-size="12" fill="#6a8898">实验三：逻辑回归算法</text>
+  
+  <!-- ========== 版本 ========== -->
+  <text x="545" y="688" font-family="Didot, 'Bodoni MT', Georgia, serif" font-size="9" fill="#6a8090" text-anchor="end">Ver 2.0 · 2025 Autumn</text>
+  
+  <!-- 左侧装饰条 -->
+  <rect x="0" y="0" width="4" height="842" fill="#b0d0e4" opacity="0.5"/>
+  
+</svg>
